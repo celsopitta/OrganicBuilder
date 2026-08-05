@@ -20,14 +20,14 @@
 	<target name="compile_application_source" depends="init">
 	    <!-- Compile the java code from ${src} into ${build} -->
 		<javac srcdir="${src}" destdir="${build}" excludes="test/**"
-			source="1.4" target="1.4"/>
+			release="8"/>
 	</target>
 	
 	<!-- Compile and run the unit tests -->
 	<target name="compile_and_run_tests" depends="compile_application_source">
 		<!-- Compile the java code of unit tests from ${src} into ${build} -->
-		<javac debug="true" srcdir="${src}" destdir="${build}" 
-				source="1.4" target="1.4">
+		<javac debug="true" srcdir="${src}" destdir="${build}"
+				release="8">
 			<include name="test/**/*.java"/>
 		</javac>
 		<junit printsummary="yes" filtertrace="yes" fork="yes" haltonfailure="yes">
