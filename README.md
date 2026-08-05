@@ -2,7 +2,7 @@
 
 **Organic Builder** is an educational artificial-chemistry game, written in Java (circa 2005–2009), that challenges the player to program "chemical reactions" so that simple atoms self-assemble into increasingly life-like structures — chains, templates, membranes, and ultimately a self-replicating "cell".
 
-It was created by **Tim J. Hutton** (with contributions from **Ralph Hartley** and **Bertrand Dechoux**) as an outreach companion to Hutton's research on artificial chemistries and the origin of life (the "Squirm3" chemistry). The project was originally hosted on SourceForge at http://organicbuilder.sourceforge.net/ and ran both as a **Java applet** embedded in a web page and as a **standalone Swing desktop application**.
+It was created by **Tim J. Hutton** (with contributions from **Ralph Hartley** and **Bertrand Dechoux**) as an outreach companion to Hutton's research on artificial chemistries and the origin of life (the "Squirm3" chemistry). The project is hosted on SourceForge at http://organicbuilder.sourceforge.net/, where the original releases are still available, and ran both as a **Java applet** embedded in a web page and as a **standalone Swing desktop application**.
 
 > This repository is an archival import of the original 2009 source release, preserved for historical and educational interest. Java applets are long dead, but the code still builds and runs as a desktop application on a modern JDK (verified with OpenJDK 21) — the only change made to the original release is a one-line build-flag update in `build.xml`.
 
@@ -113,11 +113,11 @@ To build from source you need a JDK plus [Apache Ant](https://ant.apache.org/) (
 ant            # compile, run unit tests, produce release/OrganicBuilder.jar
 ```
 
-The source compiles cleanly on modern JDKs — verified with JDK 21, both at `--release 8` (what `build.xml` now uses; the original `source="1.4"` flag is no longer accepted by current compilers) and at the default JDK 21 level, with only deprecation/unchecked warnings. Two period-piece caveats: the code uses the deprecated Applet API (`JApplet`), which has been removed from the newest JDKs — on those, the applet references in `Applet.java`, `Application.java` and `GUI.java` would need stripping (the standalone application path doesn't need them); and the "Evaluate" button's solution logger posts to a long-defunct SourceForge URL, failing silently.
+The source compiles cleanly on modern JDKs — verified with JDK 21, both at `--release 8` (what `build.xml` now uses; the original `source="1.4"` flag is no longer accepted by current compilers) and at the default JDK 21 level, with only deprecation/unchecked warnings. Two period-piece caveats: the code uses the deprecated Applet API (`JApplet`), which has been removed from the newest JDKs — on those, the applet references in `Applet.java`, `Application.java` and `GUI.java` would need stripping (the standalone application path doesn't need them); and the "Evaluate" button's solution logger posts to an endpoint of the project website that no longer exists, failing silently.
 
 ## Authors, attribution and license
 
-Organic Builder is Copyright © 2005–2007 **Tim J. Hutton** ([sq3.org.uk](http://www.sq3.org.uk)), with contributions from **Ralph Hartley** and **Bertrand Dechoux**. It was hosted on [SourceForge](http://sourceforge.net/projects/organicbuilder) ([project page](http://organicbuilder.sourceforge.net/)). All credit for the design and implementation belongs to the original authors; this repository merely republishes their GPL-licensed release for preservation.
+Organic Builder is Copyright © 2005–2007 **Tim J. Hutton** ([sq3.org.uk](http://www.sq3.org.uk)), with contributions from **Ralph Hartley** and **Bertrand Dechoux**. The project remains hosted on [SourceForge](https://sourceforge.net/projects/organicbuilder/) ([project page](http://organicbuilder.sourceforge.net/)), where the original source releases are still available. All credit for the design and implementation belongs to the original authors; this repository merely republishes their GPL-licensed release for preservation.
 
 Additional credits from the original release:
 
